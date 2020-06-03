@@ -1,0 +1,43 @@
+TARGETS = rsyslog uuidd jsonbot open-vm-tools cgmanager shellinabox php7.1-fpm lxd lvm2-lvmpolld lxcfs php5.6-fpm supervisor unattended-upgrades lvm2-lvmetad killprocs binfmt-support wd_keepalive dkms_autoinstaller apport apache2 single speech-dispatcher thermald mysql-mmm-agent mysql cgproxy tftpd-hpa dbus xinetd irqbalance mysql-mmm-monitor kerneloops and virtlogd hddtemp mdadm rng-tools isc-dhcp-server atd virtlockd whoopsie ntp rsync cron acpid ssh anacron bluetooth asterisk avahi-daemon libvirt-bin cups-browsed saned cups libvirt-guests plymouth watchdog rc.local grub-common ondemand
+INTERACTIVE = apache2
+apache2: rsyslog
+single: killprocs
+speech-dispatcher: rsyslog
+thermald: rsyslog
+mysql-mmm-agent: rsyslog
+mysql: rsyslog
+cgproxy: cgmanager
+tftpd-hpa: rsyslog
+dbus: rsyslog
+xinetd: rsyslog
+irqbalance: rsyslog
+mysql-mmm-monitor: rsyslog
+kerneloops: rsyslog
+and: rsyslog
+virtlogd: rsyslog
+hddtemp: rsyslog
+mdadm: rsyslog
+rng-tools: rsyslog
+isc-dhcp-server: rsyslog
+atd: rsyslog
+virtlockd: rsyslog
+whoopsie: rsyslog
+ntp: rsyslog
+rsync: rsyslog
+cron: rsyslog
+acpid: rsyslog
+ssh: rsyslog
+anacron: rsyslog
+bluetooth: rsyslog dbus
+asterisk: rsyslog mysql
+avahi-daemon: dbus rsyslog
+libvirt-bin: rsyslog virtlogd
+cups-browsed: rsyslog
+saned: rsyslog dbus
+cups: rsyslog
+libvirt-guests: libvirt-bin
+plymouth: speech-dispatcher rsyslog apache2 thermald uuidd mysql-mmm-agent jsonbot mysql open-vm-tools cgproxy cgmanager tftpd-hpa dbus shellinabox bluetooth php7.1-fpm lxd lvm2-lvmpolld xinetd irqbalance mysql-mmm-monitor kerneloops and asterisk virtlogd lxcfs hddtemp mdadm libvirt-bin php5.6-fpm libvirt-guests supervisor cups-browsed rng-tools avahi-daemon unattended-upgrades lvm2-lvmetad isc-dhcp-server atd virtlockd whoopsie ntp saned cups rsync binfmt-support wd_keepalive cron acpid dkms_autoinstaller ssh apport anacron
+watchdog: speech-dispatcher rsyslog apache2 thermald uuidd mysql-mmm-agent jsonbot mysql open-vm-tools cgproxy cgmanager tftpd-hpa dbus shellinabox bluetooth php7.1-fpm lxd lvm2-lvmpolld xinetd irqbalance mysql-mmm-monitor kerneloops and asterisk virtlogd lxcfs hddtemp mdadm libvirt-bin php5.6-fpm libvirt-guests supervisor cups-browsed rng-tools avahi-daemon unattended-upgrades lvm2-lvmetad isc-dhcp-server atd virtlockd whoopsie ntp saned cups rsync binfmt-support wd_keepalive cron acpid dkms_autoinstaller ssh apport anacron
+rc.local: speech-dispatcher rsyslog apache2 thermald uuidd mysql-mmm-agent jsonbot mysql open-vm-tools cgproxy cgmanager tftpd-hpa dbus shellinabox bluetooth php7.1-fpm lxd lvm2-lvmpolld xinetd irqbalance mysql-mmm-monitor kerneloops and asterisk virtlogd lxcfs hddtemp mdadm libvirt-bin php5.6-fpm libvirt-guests supervisor cups-browsed rng-tools avahi-daemon unattended-upgrades lvm2-lvmetad isc-dhcp-server atd virtlockd whoopsie ntp saned cups rsync binfmt-support wd_keepalive cron acpid dkms_autoinstaller ssh apport anacron
+grub-common: speech-dispatcher rsyslog apache2 thermald uuidd mysql-mmm-agent jsonbot mysql open-vm-tools cgproxy cgmanager tftpd-hpa dbus shellinabox bluetooth php7.1-fpm lxd lvm2-lvmpolld xinetd irqbalance mysql-mmm-monitor kerneloops and asterisk virtlogd lxcfs hddtemp mdadm libvirt-bin php5.6-fpm libvirt-guests supervisor cups-browsed rng-tools avahi-daemon unattended-upgrades lvm2-lvmetad isc-dhcp-server atd virtlockd whoopsie ntp saned cups rsync binfmt-support wd_keepalive cron acpid dkms_autoinstaller ssh apport anacron
+ondemand: speech-dispatcher rsyslog apache2 thermald uuidd mysql-mmm-agent jsonbot mysql open-vm-tools cgproxy cgmanager tftpd-hpa dbus shellinabox bluetooth php7.1-fpm lxd lvm2-lvmpolld xinetd irqbalance mysql-mmm-monitor kerneloops and asterisk virtlogd lxcfs hddtemp mdadm libvirt-bin php5.6-fpm libvirt-guests supervisor cups-browsed rng-tools avahi-daemon unattended-upgrades lvm2-lvmetad isc-dhcp-server atd virtlockd whoopsie ntp saned cups rsync binfmt-support wd_keepalive cron acpid dkms_autoinstaller ssh apport anacron

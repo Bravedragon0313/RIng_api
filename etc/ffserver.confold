@@ -1,0 +1,42 @@
+HTTPPort 8080
+HTTPBindAddress 0.0.0.0
+MaxHTTPConnections 2000
+MaxClients 1000
+MaxBandwidth 1000000
+CustomLog -
+
+<Feed feed1.ffm>
+   File /tmp/feed1.ffm
+   FileMaxSize 20M
+   Launch ffmpeg -i "rtsp://192.168.1.138:8554/ring01"
+</Feed>
+
+<Stream s0.mjpeg>
+   Feed feed1.ffm
+   Format mpjpeg
+   VideoBitRate 10000
+   VideoFrameRate 15
+   VideoSize 1280x720
+   VideoIntraOnly
+   NoAudio
+   Strict -1
+   NoDefaults
+</Stream>
+
+<Feed feed2.ffm>
+   File /tmp/feed1.ffm
+   FileMaxSize 20M
+   Launch ffmpeg -i "rtsp://192.168.1.138:8557/ring03"
+</Feed>
+
+<Stream s1.mjpeg>
+   Feed feed2.ffm
+   Format mpjpeg
+   VideoBitRate 10000
+   VideoFrameRate 15
+   VideoSize 1280x720
+   VideoIntraOnly
+   NoAudio
+   Strict -1
+   NoDefaults
+</Stream>

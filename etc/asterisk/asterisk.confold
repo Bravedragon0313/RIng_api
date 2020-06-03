@@ -1,0 +1,28 @@
+; ------------------------------------------------
+; Xaccel PBX configuration file 
+; ver. Xaccel 1.6      
+; support@xaccel.net
+; ------------------------------------------------
+
+[directories]
+astetcdir => /etc/asterisk
+astmoddir => /usr/lib/asterisk/modules
+astvarlibdir => /var/lib/asterisk
+astdbdir => /var/lib/asterisk
+astkeydir => /var/lib/asterisk
+astdatadir => /var/lib/asterisk
+astagidir => /var/lib/asterisk/agi-bin
+astspooldir => /var/spool/asterisk
+astrundir => /var/run
+astlogdir => /var/log/asterisk
+
+[files]
+astctlpermissions = 0660
+astctlowner = root
+astctlgroup = apache
+astctl = asterisk.ctl
+
+[compat]
+pbx_realtime=1.6
+res_agi=1.6
+app_set=1.6

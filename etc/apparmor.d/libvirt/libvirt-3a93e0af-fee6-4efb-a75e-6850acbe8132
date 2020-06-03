@@ -1,0 +1,11 @@
+#
+# This profile is for the domain whose UUID matches this file.
+#
+
+#include <tunables/global>
+
+profile libvirt-3a93e0af-fee6-4efb-a75e-6850acbe8132 {
+  #include <abstractions/libvirt-qemu>
+  #include <libvirt/libvirt-3a93e0af-fee6-4efb-a75e-6850acbe8132.files>
+
+}

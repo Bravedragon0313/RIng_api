@@ -1,0 +1,48 @@
+#
+# This file MUST be edited with the 'visudo' command as root.
+#
+# Please consider adding local content in /etc/sudoers.d/ instead of
+# directly modifying this file.
+#
+# See the man page for details on how to write a sudoers file.
+#
+Defaults	env_reset
+Defaults	mail_badpass
+Defaults	secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin"
+
+# Host alias specification
+
+# User alias specification
+User_Alias    NETWORKING_USERS = admin
+# Cmnd alias specification
+Cmnd_Alias    NETWORKING_COMMANDS = /usr/bin/vim /etc/network/interfaces /usr/bin/nmcli
+# User privilege specification
+root	ALL=(ALL:ALL) ALL
+admin   ALL=(ALL:ALL) ALL
+# Members of the admin group may gain root privileges
+%admin ALL=(ALL) ALL
+
+# Allow members of group sudo to execute any command
+%sudo	ALL=(ALL:ALL) ALL
+
+# See sudoers(5) for more information on "#include" directives:
+
+#includedir /etc/sudoers.d
+www ALL=(ALL) NOPASSWD: ALL
+www-data ALL=(ALL) NOPASSWD: ALL
+user ALL=(ALL:ALL) NOPASSWD:/etc/ringrestart.sh 
+user ALL=(ALL:ALL) NOPASSWD:/etc/cronrestart.sh
+user ALL=(ALL:ALL) NOPASSWD:/etc/rclocalrestart.sh
+user ALL=(ALL:ALL) NOPASSWD:/etc/
+user ALL=(ALL:ALL) NOPASSWD:/usr/bin/perl
+user ALL=(ALL:ALL) NOPASSWD:/etc/ip_listener.sh
+user ALL=(ALL:ALL) NOPASSWD:/etc/asteriskhangup.sh
+user ALL=(ALL:ALL) NOPASSWD:/etc/restorefactorydefault.sh
+user ALL=(ALL:ALL) NOPASSWD:/etc/restorelogin.sh 
+user ALL=(ALL:ALL) NOPASSWD:/etc/restorefactorysql.sh
+user ALL=(ALL:ALL) NOPASSWD:/etc/console.sh
+user ALL=(ALL:ALL) NOPASSWD:/etc/ringlog.sh
+user ALL=(ALL:ALL) NOPASSWD:/etc/ringhangup.sh
+user ALL=(ALL:ALL) NOPASSWD:/etc/triggerhangup.sh
+user ALL=(ALL:ALL) NOPASSWD:/etc/asterisk/trigger.sh
+NETWORKING_USERS ALL= NOPASSWD: NETWORKING_COMMANDS

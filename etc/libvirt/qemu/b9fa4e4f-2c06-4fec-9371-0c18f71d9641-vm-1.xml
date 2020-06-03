@@ -1,0 +1,92 @@
+<!--
+WARNING: THIS IS AN AUTO-GENERATED FILE. CHANGES TO IT ARE LIKELY TO BE
+OVERWRITTEN AND LOST. Changes to this xml configuration should be made using:
+  virsh edit b9fa4e4f-2c06-4fec-9371-0c18f71d9641-vm-1
+or other application using the libvirt API.
+-->
+
+<domain type='kvm'>
+  <name>b9fa4e4f-2c06-4fec-9371-0c18f71d9641-vm-1</name>
+  <uuid>3a93e0af-fee6-4efb-a75e-6850acbe8132</uuid>
+  <description>Windows 7</description>
+  <metadata xmlns:ns0="https://github.com/kimchi-project/kimchi">
+    <ns0:metadata>
+      <ns0:os distro="7" version="Windows"/>
+      <ns0:access>
+        <ns0:auth type="pam">
+          <ns0:group>root</ns0:group>
+        </ns0:auth>
+      </ns0:access>
+    </ns0:metadata>
+  </metadata>
+  <memory unit='KiB'>1048576</memory>
+  <currentMemory unit='KiB'>1048576</currentMemory>
+  <memtune>
+    <hard_limit unit='KiB'>2097152</hard_limit>
+  </memtune>
+  <vcpu placement='static'>1</vcpu>
+  <os>
+    <type arch='x86_64' machine='pc-i440fx-xenial'>hvm</type>
+    <boot dev='hd'/>
+    <boot dev='cdrom'/>
+    <boot dev='network'/>
+  </os>
+  <features>
+    <acpi/>
+    <apic/>
+    <pae/>
+  </features>
+  <cpu>
+    <numa>
+      <cell id='0' cpus='0' memory='1048576' unit='KiB'/>
+    </numa>
+  </cpu>
+  <clock offset='utc'/>
+  <on_poweroff>destroy</on_poweroff>
+  <on_reboot>restart</on_reboot>
+  <on_crash>restart</on_crash>
+  <devices>
+    <emulator>/usr/bin/kvm-spice</emulator>
+    <disk type='file' device='disk'>
+      <driver name='qemu' type='qcow2' cache='none'/>
+      <source file='/var/lib/libvirt/images/3a93e0af-fee6-4efb-a75e-6850acbe8132-0.img'/>
+      <target dev='hda' bus='ide'/>
+      <address type='drive' controller='0' bus='0' target='0' unit='0'/>
+    </disk>
+    <controller type='usb' index='0'>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x01' function='0x2'/>
+    </controller>
+    <controller type='pci' index='0' model='pci-root'/>
+    <controller type='ide' index='0'>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x01' function='0x1'/>
+    </controller>
+    <interface type='network'>
+      <mac address='52:54:00:61:a7:67'/>
+      <source network='default'/>
+      <model type='e1000'/>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x03' function='0x0'/>
+    </interface>
+    <serial type='pty'>
+      <target port='0'/>
+    </serial>
+    <console type='pty'>
+      <target type='serial' port='0'/>
+    </console>
+    <input type='tablet' bus='usb'/>
+    <input type='mouse' bus='ps2'/>
+    <input type='keyboard' bus='ps2'/>
+    <graphics type='vnc' port='-1' autoport='yes' listen='127.0.0.1'>
+      <listen type='address' address='127.0.0.1'/>
+    </graphics>
+    <sound model='ich6'>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x04' function='0x0'/>
+    </sound>
+    <video>
+      <model type='vmvga' vram='16384' heads='1'/>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x02' function='0x0'/>
+    </video>
+    <memballoon model='virtio'>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x05' function='0x0'/>
+    </memballoon>
+  </devices>
+</domain>

@@ -1,0 +1,10 @@
+# Defaults for the jsonbot initscript
+
+# Set to yes to start a system-wide instance of jsonbot
+RUN=no
+
+# Set to the user jsonbot should run as
+RUNUSER=jsb
+
+# Arguments to jsb-fleet
+ARGSTRING=""

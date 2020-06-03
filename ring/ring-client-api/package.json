@@ -1,0 +1,159 @@
+{
+  "_args": [
+    [
+      "ring-client-api",
+      "/home"
+    ]
+  ],
+  "_from": "ring-client-api@latest",
+  "_hasShrinkwrap": false,
+  "_id": "ring-client-api@7.2.2",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/ring-client-api",
+  "_nodeVersion": "12.14.0",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/ring-client-api_7.2.2_1586122181715_0.3305809480818964"
+  },
+  "_npmUser": {
+    "email": "dustin.greif@gmail.com",
+    "name": "dustin.greif"
+  },
+  "_npmVersion": "6.14.4",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "ring-client-api",
+    "raw": "ring-client-api",
+    "rawSpec": "",
+    "scope": null,
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/ring-client-api/-/ring-client-api-7.2.2.tgz",
+  "_shasum": "1552e8b987ad9d0103a7318bd82ed3335d524d83",
+  "_shrinkwrap": null,
+  "_spec": "ring-client-api",
+  "_where": "/home",
+  "author": {
+    "name": "dgreif"
+  },
+  "bin": {
+    "ring-auth-cli": "ring-auth-cli.js",
+    "ring-device-data-cli": "ring-device-data-cli.js"
+  },
+  "bugs": {
+    "url": "https://github.com/dgreif/ring/issues"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "colors": "^1.4.0",
+    "debug": "^4.1.1",
+    "execa": "^4.0.0",
+    "ffmpeg-for-homebridge": "0.0.3",
+    "get-port": "^5.1.1",
+    "nat-puncher": "^0.1.8",
+    "node-machine-id": "^1.1.12",
+    "public-ip": "^4.0.1",
+    "rxjs": "^6.5.5",
+    "sdp": "^2.12.0",
+    "sip": "0.0.6",
+    "socket.io": "^2.3.0",
+    "stun": "^2.1.0",
+    "uuid": "^7.0.3"
+  },
+  "description": "Unofficial API for Ring doorbells, cameras, security alarm system and smart lighting",
+  "devDependencies": {
+    "@types/debug": "^4.1.5",
+    "@types/jest": "^25.2.1",
+    "@types/node": "^13.11.0",
+    "@types/socket.io-client": "^1.4.32",
+    "@types/uuid": "^7.0.2",
+    "@typescript-eslint/eslint-plugin": "^2.26.0",
+    "@typescript-eslint/parser": "^2.26.0",
+    "conventional-github-releaser": "^3.1.3",
+    "dotenv": "^8.2.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.1",
+    "eslint-plugin-jest": "^23.8.2",
+    "eslint-plugin-prettier": "^3.1.2",
+    "express": "^4.17.1",
+    "homebridge": "^0.4.53",
+    "homebridge-config-ui-x": "^4.13.3",
+    "jest": "^25.2.7",
+    "prettier": "^2.0.2",
+    "rimraf": "^3.0.2",
+    "standard-version": "^7.1.0",
+    "ts-jest": "^25.3.1",
+    "typescript": "^3.8.3"
+  },
+  "directories": {},
+  "dist": {
+    "fileCount": 34,
+    "integrity": "sha512-T8DM+1e2rF6IpoUGZBjR1+PdNeIPlhcyRG3qL51UvyaRDxSzZhBmcIHaTK244qJSx2CVfvIEzs/iYJmsnpUWig==",
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeik3GCRA9TVsSAnZWagAAZ+cQAINYGKM72XA0IqOLH9X7\n/k7bG14pTy7PFIi0t939t3WmJYBP3Apx9ZSgnuKL0hgBZiN/8LiZngdnt4GO\nAe0u69BUumZiqe3jb0Q8OXVMreS29JWyULgi+UTieTViPpTJg1KhrAiRQxtP\nrHShQv+wtEApvdScoUDxO6lLdT0hQSDf7707vx0W7N8WOJrnvaJL+cZX5tyW\nPs0UkR+Bkog/3G147XhPV1tPPtkxPGXPOmMRgEkklJ3bLGoxh+DZS9Y0g0xS\nb0zmG+tGew/gXYdBMCYNkHptqyHNOxBRFx10nyj/7GaxjHlv+U4P38ob9jT5\n3O9s+8ol1MCLhR3r0uCaTCVl+gcnlsS8gkc4xC940dZtjCU1K6B96n3DGt8t\nOzRQy3DKRUfm7KFejG3if+UheqUD3z5kGXgYwiKd1kX+Bw1RgDarlDFea3DR\nr2ajDEBHHZamC8+PHXRqYuaxYU903Zbrf0Bz6rVLsk1ZE7vvUQofPW1RKjLH\n+Tea35Do5bCzAEVFDz5c4RQm2KypXfDAOOaP1MnTreUbzbP9O/JOFNizgF57\nkf+n4ygGMUpUBykXhX7/IhK3tzQzbpSKirFPj1FhX0nzHRsi040DIkboZosZ\n8Me8jKoXOZke8FZaaxA0aK1rlSmvhDJGcS74OTgR/kNhZXej9OS/dPdkHhw9\ns4ra\r\n=Y5t2\r\n-----END PGP SIGNATURE-----\r\n",
+    "shasum": "1552e8b987ad9d0103a7318bd82ed3335d524d83",
+    "tarball": "https://registry.npmjs.org/ring-client-api/-/ring-client-api-7.2.2.tgz",
+    "unpackedSize": 161920
+  },
+  "engines": {
+    "node": ">=10"
+  },
+  "homepage": "https://github.com/dgreif/ring#readme",
+  "keywords": [
+    "alarm",
+    "api",
+    "beam",
+    "camera",
+    "client",
+    "doorbell",
+    "doorbot",
+    "light",
+    "ring",
+    "security",
+    "smart"
+  ],
+  "license": "MIT",
+  "main": "lib/api/index.js",
+  "maintainers": [
+    {
+      "name": "dustin.greif",
+      "email": "dustin.greif@gmail.com"
+    }
+  ],
+  "name": "ring-client-api",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/dgreif/ring.git"
+  },
+  "scripts": {
+    "api-example": "npm run build && node ./lib/examples/api-example.js",
+    "auth-cli": "npm run build && ./ring-auth-cli.js",
+    "browser-example": "npm run build && node ./lib/examples/browser-example.js",
+    "build": "rm -rf lib && tsc --declaration",
+    "deploy": "standard-version && npm publish release-api && npm publish release-homebridge && npm run push-with-tags",
+    "deploy-alpha": "standard-version --prerelease alpha && npm publish --tag alpha release-api && npm publish --tag alpha release-homebridge && npm run push-with-tags",
+    "device-data-cli": "npm run build && ./ring-device-data-cli.js",
+    "example": "npm run build && node ./lib/examples/example.js",
+    "lint": "eslint **/*.ts --fix",
+    "prepare-npm-packages": "./build/package-api.sh && ./build/package-homebridge.sh",
+    "push-with-tags": "git push --follow-tags && node ./build/github-releaser.js",
+    "record-example": "npm run build && node ./lib/examples/record-example.js",
+    "stream-example": "npm run build && node ./lib/examples/stream-example.js",
+    "test": "jest && eslint **/*.ts",
+    "test-homebridge": "npm run build && ./build/package-homebridge.sh && homebridge -P ./release-homebridge",
+    "watch:tests": "jest --watch"
+  },
+  "standard-version": {
+    "scripts": {
+      "posttag": "npm run prepare-npm-packages",
+      "prerelease": "npm run build && npm test"
+    }
+  },
+  "version": "7.2.2"
+}

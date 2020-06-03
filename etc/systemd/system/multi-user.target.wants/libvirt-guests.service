@@ -1,0 +1,19 @@
+[Unit]
+Description=Suspend Active Libvirt Guests
+After=network.target libvirt-bin.service time-sync.target
+Documentation=man:libvirtd(8)
+Documentation=http://libvirt.org
+
+[Service]
+EnvironmentFile=-/etc/default/libvirt-guests
+# Hack just call traditional service until we factor
+# out the code
+ExecStart=/usr/lib/libvirt/libvirt-guests.sh start
+ExecStop=/usr/lib/libvirt/libvirt-guests.sh stop
+Type=oneshot
+RemainAfterExit=yes
+StandardOutput=journal+console
+TimeoutStopSec=0
+
+[Install]
+WantedBy=multi-user.target

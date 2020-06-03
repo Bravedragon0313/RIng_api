@@ -1,0 +1,78 @@
+[global]
+user_agent=Android/1.10.14 (belle-sip/1.4.2)
+type=global
+
+[transport-udp]
+type = transport
+protocol = udp
+bind = 0.0.0.0
+
+[transport-tls]
+type=transport
+protocol=tls
+bind = 0.0.0.0
+method=tlsv1
+
+[sip2rtsp]
+type=endpoint
+transport=transport-udp
+context=local
+allow=all
+auth=sip2rtsp
+aors=sip2rtsp
+;rtp_timeout=3
+callerid=ring0 <sip2rtsp>
+
+[sip2rtsp]
+type=aor
+max_contacts=1
+remove_existing=yes
+;qualify_frequency=1
+
+[sip2rtsp]
+type=auth
+auth_type=userpass
+password=sip2rtsp
+username=sip2rtsp
+
+[12029917013]
+type=registration
+transport=transport-udp
+outbound_auth = 12029917013
+server_uri = sip:sip.ringcentral.com
+client_uri = sip:12029917013@sip.ringcentral.com
+outbound_proxy = sip20.ringcentral.com:5090
+retry_interval = 60
+
+[12029917013] 
+type = aor
+contact = sip:803524109020@sip.ringcentral.com
+
+[12029917013] 
+type = identify 
+endpoint = 12029917013
+match = sip.ringcentral.com 
+
+[12029917013] 
+type = auth 
+username = 12029917013
+password = oG263zFZC 
+
+[12029917013] 
+type = endpoint 
+dtmf_mode = none
+disallow = all
+allow = ulaw
+rtp_symmetric = yes 
+rewrite_contact = yes 
+outbound_proxy = sip20.ringcentral.com:5090 
+direct_media = no 
+from_user = 12029917013 
+from_domain = sip.ringcentral.com 
+device_state_busy_at = 2
+auth = 12029917013
+outbound_auth = 12029917013 
+aors = 12029917013
+
+#include "rings.conf"
+#include "sip2pjsipexport.conf"

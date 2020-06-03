@@ -1,0 +1,67 @@
+TARGETS = watchdog nginx lightdm apache-htcacheclean uuidd jsonbot open-vm-tools cgmanager shellinabox php7.1-fpm lxd lvm2-lvmpolld lxcfs php5.6-fpm supervisor unattended-upgrades lvm2-lvmetad apache2 alsa-utils ebtables ufw speech-dispatcher thermald mysql-mmm-agent cgproxy tftpd-hpa xinetd irqbalance mysql-mmm-monitor kerneloops and hddtemp mdadm rng-tools isc-dhcp-server atd virtlockd whoopsie ntp bluetooth asterisk resolvconf cups-browsed saned cups libvirt-guests plymouth urandom open-iscsi mysql avahi-daemon libvirt-bin iscsid virtlogd sendsigs rsyslog umountnfs.sh hwclock.sh rpcbind networking umountfs cryptdisks cryptdisks-early umountroot mdadm-waitidle halt reboot
+nginx: watchdog
+lightdm: watchdog
+apache-htcacheclean: watchdog
+uuidd: watchdog
+jsonbot: watchdog
+open-vm-tools: watchdog
+cgmanager: watchdog
+shellinabox: watchdog
+php7.1-fpm: watchdog
+lxd: watchdog
+lvm2-lvmpolld: watchdog
+lxcfs: watchdog
+php5.6-fpm: watchdog
+supervisor: watchdog
+unattended-upgrades: watchdog
+lvm2-lvmetad: watchdog
+apache2: watchdog
+alsa-utils: watchdog
+ebtables: watchdog
+ufw: watchdog
+speech-dispatcher: watchdog
+thermald: watchdog
+mysql-mmm-agent: watchdog
+cgproxy: watchdog
+tftpd-hpa: watchdog
+xinetd: watchdog
+irqbalance: watchdog
+mysql-mmm-monitor: watchdog
+kerneloops: watchdog
+and: watchdog
+hddtemp: watchdog
+mdadm: watchdog
+rng-tools: watchdog
+isc-dhcp-server: watchdog
+atd: watchdog
+virtlockd: watchdog
+whoopsie: watchdog
+ntp: watchdog
+bluetooth: watchdog
+asterisk: watchdog
+resolvconf: watchdog
+cups-browsed: watchdog
+saned: watchdog
+cups: watchdog
+libvirt-guests: watchdog
+plymouth: watchdog
+urandom: watchdog
+open-iscsi: watchdog
+mysql: asterisk watchdog
+avahi-daemon: libvirt-bin cups-browsed saned watchdog
+libvirt-bin: libvirt-guests watchdog
+iscsid: open-iscsi watchdog
+virtlogd: libvirt-bin watchdog
+sendsigs: plymouth speech-dispatcher apache2 thermald iscsid uuidd mysql-mmm-agent jsonbot mysql open-vm-tools nginx tftpd-hpa lightdm shellinabox bluetooth php7.1-fpm lxd alsa-utils apache-htcacheclean xinetd irqbalance mysql-mmm-monitor kerneloops open-iscsi and asterisk virtlogd lxcfs hddtemp mdadm libvirt-bin php5.6-fpm libvirt-guests supervisor cups-browsed rng-tools avahi-daemon unattended-upgrades isc-dhcp-server atd virtlockd watchdog
+rsyslog: speech-dispatcher apache2 thermald mysql-mmm-agent mysql nginx tftpd-hpa sendsigs bluetooth apache-htcacheclean xinetd irqbalance mysql-mmm-monitor kerneloops and asterisk virtlogd hddtemp mdadm libvirt-bin cups-browsed rng-tools avahi-daemon isc-dhcp-server atd virtlockd whoopsie ntp saned cups watchdog
+umountnfs.sh: plymouth speech-dispatcher apache2 thermald uuidd mysql-mmm-agent jsonbot mysql open-vm-tools nginx tftpd-hpa rsyslog lightdm shellinabox bluetooth php7.1-fpm lxd alsa-utils apache-htcacheclean xinetd irqbalance mysql-mmm-monitor kerneloops and asterisk virtlogd lxcfs sendsigs hddtemp libvirt-bin php5.6-fpm libvirt-guests supervisor cups-browsed rng-tools avahi-daemon unattended-upgrades isc-dhcp-server atd virtlockd watchdog
+hwclock.sh: uuidd mysql rsyslog kerneloops cups-browsed atd watchdog
+rpcbind: umountnfs.sh watchdog
+networking: apache2 iscsid mysql-mmm-agent mysql nginx tftpd-hpa rpcbind lightdm shellinabox php7.1-fpm xinetd mysql-mmm-monitor kerneloops open-iscsi asterisk hddtemp php5.6-fpm supervisor cups-browsed isc-dhcp-server umountnfs.sh watchdog
+umountfs: plymouth speech-dispatcher apache2 thermald iscsid uuidd mysql-mmm-agent jsonbot mysql open-vm-tools nginx tftpd-hpa rpcbind lightdm shellinabox bluetooth php7.1-fpm lxd networking alsa-utils hwclock.sh lvm2-lvmpolld apache-htcacheclean xinetd irqbalance mysql-mmm-monitor kerneloops open-iscsi and asterisk virtlogd urandom lxcfs hddtemp mdadm libvirt-bin ebtables php5.6-fpm libvirt-guests supervisor cups-browsed rng-tools avahi-daemon unattended-upgrades lvm2-lvmetad isc-dhcp-server resolvconf atd virtlockd umountnfs.sh watchdog
+cryptdisks: umountfs watchdog
+cryptdisks-early: cryptdisks umountfs watchdog
+umountroot: cryptdisks cryptdisks-early umountfs watchdog
+mdadm-waitidle: umountroot watchdog
+halt: mdadm-waitidle umountroot watchdog
+reboot: mdadm-waitidle umountroot watchdog

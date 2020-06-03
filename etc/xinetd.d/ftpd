@@ -1,0 +1,12 @@
+service ftp
+{
+	disable		= no
+	flags		= IPv6
+	socket_type	= stream
+	wait		= no
+	user		= root
+	server		= /usr/sbin/in.ftpd
+	server_args	= -l
+	log_type	= SYSLOG daemon info
+	log_on_failure	= HOST
+}

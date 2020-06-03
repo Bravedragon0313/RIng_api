@@ -1,0 +1,10 @@
+#!/usr/bin/python2.7
+# PBR Generated from u'console_scripts'
+
+import sys
+
+from oslo_rootwrap.cmd import daemon
+
+
+if __name__ == "__main__":
+    sys.exit(daemon())

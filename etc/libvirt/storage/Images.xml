@@ -1,0 +1,19 @@
+<!--
+WARNING: THIS IS AN AUTO-GENERATED FILE. CHANGES TO IT ARE LIKELY TO BE
+OVERWRITTEN AND LOST. Changes to this xml configuration should be made using:
+  virsh pool-edit Images
+or other application using the libvirt API.
+-->
+
+<pool type='dir'>
+  <name>Images</name>
+  <uuid>273971ad-badc-47d3-854a-41c633ca0a53</uuid>
+  <capacity unit='bytes'>0</capacity>
+  <allocation unit='bytes'>0</allocation>
+  <available unit='bytes'>0</available>
+  <source>
+  </source>
+  <target>
+    <path>/images</path>
+  </target>
+</pool>

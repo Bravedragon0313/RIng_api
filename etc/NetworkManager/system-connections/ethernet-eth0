@@ -1,0 +1,13 @@
+[connection]
+id=ethernet-eth0
+uuid=c790ca31-6717-4d04-a156-2c4cf3907676
+type=ethernet
+interface-name=eth0
+master=bridge0
+permissions=
+secondaries=
+slave-type=bridge
+timestamp=1549669712
+
+[ethernet]
+mac-address-blacklist=

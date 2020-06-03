@@ -1,0 +1,21 @@
+
+[Unit]
+Description=Acronis machine management service
+After=dkms_autoinstaller.service
+
+[Service]
+Type=notify
+WorkingDirectory=/var/lib/Acronis/mms
+ExecStart=/usr/sbin/acronis_mms
+Restart=always
+# time to sleep before restarting a service
+RestartSec=5min
+# time to wait for start-up
+TimeoutStartSec=20min
+# time to wait for stop
+TimeoutStopSec=1min
+StartLimitInterval=5
+StartLimitBurst=9999
+
+[Install]
+WantedBy=multi-user.target

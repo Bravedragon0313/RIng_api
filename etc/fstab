@@ -1,0 +1,13 @@
+# /etc/fstab: static file system information.
+#
+# Use 'blkid' to print the universally unique identifier for a
+# device; this may be used with UUID= as a more robust way to name devices
+# that works even if disks are added and removed. See fstab(5).
+#
+# <file system> <mount point>   <type>  <options>       <dump>  <pass>
+# Bootability restore: Change id = 110ADFE1-5573-4551-9683-B4FDD0FC8730
+UUID=d4fe35a5-4643-4410-aa0a-f94cbe08140c / ext4 errors=remount-ro 0 1 
+# /boot was on /dev/sda1 during installation
+UUID=85ddf3ca-09c4-4010-b0a3-36f314a85661 /boot ext2 defaults 0 2 
+#/dev/mapper/ring--vg-swap_1 none            swap    sw              0       0
+/dev/fd0        /media/floppy0  auto    rw,user,noauto,exec,utf8 0       0

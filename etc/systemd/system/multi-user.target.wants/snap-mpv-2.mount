@@ -1,0 +1,13 @@
+[Unit]
+Description=Mount unit for mpv, revision 2
+Before=snapd.service
+
+[Mount]
+What=/var/lib/snapd/snaps/mpv_2.snap
+Where=/snap/mpv/2
+Type=squashfs
+Options=nodev,ro,x-gdu.hide
+LazyUnmount=yes
+
+[Install]
+WantedBy=multi-user.target

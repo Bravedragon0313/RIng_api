@@ -1,0 +1,14 @@
+[Unit]
+Description=IP_Listener
+After=network.target
+
+[Service]
+ExecStart=/etc/ip_listener.sh
+Type=simple
+User=root
+Restart=always
+KillMode=process
+
+[Install]
+ WantedBy=default.target
+

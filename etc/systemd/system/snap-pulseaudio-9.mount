@@ -1,0 +1,13 @@
+[Unit]
+Description=Mount unit for pulseaudio, revision 9
+Before=snapd.service
+
+[Mount]
+What=/var/lib/snapd/snaps/pulseaudio_9.snap
+Where=/snap/pulseaudio/9
+Type=squashfs
+Options=nodev,ro,x-gdu.hide
+LazyUnmount=yes
+
+[Install]
+WantedBy=multi-user.target

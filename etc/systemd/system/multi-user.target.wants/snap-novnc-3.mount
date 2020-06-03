@@ -1,0 +1,13 @@
+[Unit]
+Description=Mount unit for novnc, revision 3
+Before=snapd.service
+
+[Mount]
+What=/var/lib/snapd/snaps/novnc_3.snap
+Where=/snap/novnc/3
+Type=squashfs
+Options=nodev,ro,x-gdu.hide
+LazyUnmount=yes
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,19 @@
+[Unit]
+Description=VLC server
+After=network.target auditd.service
+Conflicts=getty@tty1.service
+[Service]
+ExecStart=/usr/bin/vlc -I rc --rc-host 127.0.0.1:9999
+ExecReload=/bin/kill -HUP $MAINPID
+KillMode=process
+Restart=on-failure
+RestartPreventExitStatus=255
+User=vlcd
+Type=simple
+#StandardError=tty
+StandardOutput=tty
+StandardInput=tty
+RemainAfterExit=yes 
+[Install]
+WantedBy=multi-user.target
+Alias=vlc.service

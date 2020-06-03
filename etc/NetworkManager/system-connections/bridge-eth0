@@ -1,0 +1,16 @@
+[connection]
+id=bridge-eth0
+uuid=baa7b129-09cf-46c2-ba81-65efa4e4f4f4
+type=bridge
+interface-name=eth0
+permissions=
+secondaries=
+
+[ipv4]
+dns-search=
+method=auto
+
+[ipv6]
+addr-gen-mode=stable-privacy
+dns-search=
+method=auto

@@ -1,0 +1,13 @@
+<!--
+WARNING: THIS IS AN AUTO-GENERATED FILE. CHANGES TO IT ARE LIKELY TO BE
+OVERWRITTEN AND LOST. Changes to this xml configuration should be made using:
+  virsh net-edit 329b153e-4515-40d3-b546-c196e154b33e
+or other application using the libvirt API.
+-->
+
+<network>
+  <name>default</name>
+  <uuid>329b153e-4515-40d3-b546-c196e154b33e</uuid>
+  <forward mode='bridge'/>
+  <bridge name='bridge0'/>
+</network>

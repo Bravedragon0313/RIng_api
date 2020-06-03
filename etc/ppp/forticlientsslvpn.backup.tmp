@@ -1,0 +1,4 @@
+specialgw=192.168.1.254
+specialhasrd=0
+svrgw=192.168.1.254
+svrhasrd=0

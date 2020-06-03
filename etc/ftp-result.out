@@ -1,0 +1,12 @@
+Connected to ftp.xaccel.net.
+220 Serv-U FTP Server v15.1 ready...
+331 User name okay, need password.
+230 User logged in, proceed.
+Remote system type is UNIX.
+Using binary mode to transfer files.
+local: x00301802bf85-backupfile.sql.gz remote: x00301802bf85-backupfile.sql.gz
+200 PORT command successful.
+150 Opening BINARY mode data connection for x00301802bf85-backupfile.sql.gz.
+226 Transfer complete. 182,239 bytes transferred. 3,786.55 KB/sec.
+182239 bytes sent in 0.02 secs (7.4706 MB/s)
+221 Goodbye, closing session.

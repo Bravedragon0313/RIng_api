@@ -1,0 +1,12 @@
+
+[Unit]
+Description=Acronis schedule service
+
+[Service]
+Type=oneshot
+WorkingDirectory=/var/lib/Acronis/Schedule
+ExecStart=/usr/lib/Acronis/Schedule/schedwrapper -m startup
+ExecStop=/usr/lib/Acronis/Schedule/schedwrapper -m shutdown
+
+[Install]
+WantedBy=multi-user.target

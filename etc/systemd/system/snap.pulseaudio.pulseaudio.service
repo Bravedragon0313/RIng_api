@@ -1,0 +1,18 @@
+[Unit]
+# Auto-generated, DO NOT EDIT
+Description=Service for snap application pulseaudio.pulseaudio
+Requires=snap-pulseaudio-9.mount
+Wants=network.target
+After=snap-pulseaudio-9.mount network.target
+X-Snappy=yes
+
+[Service]
+ExecStart=/usr/bin/snap run pulseaudio
+SyslogIdentifier=pulseaudio.pulseaudio
+Restart=on-failure
+WorkingDirectory=/var/snap/pulseaudio/9
+TimeoutStopSec=30
+Type=simple
+
+[Install]
+WantedBy=multi-user.target

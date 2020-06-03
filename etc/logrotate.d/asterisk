@@ -1,0 +1,8 @@
+/var/log/asterisk/cdr-custom/Master.csv /var/log/asterisk/debug /var/log/asterisk/event_log /var/log/asterisk/messages {
+	weekly
+	missingok
+	rotate 5
+	size 2000k
+	copytruncate
+	endscript
+}

@@ -1,0 +1,13 @@
+[Unit]
+Description=Mount unit for ffmpeg, revision 821
+Before=snapd.service
+
+[Mount]
+What=/var/lib/snapd/snaps/ffmpeg_821.snap
+Where=/snap/ffmpeg/821
+Type=squashfs
+Options=nodev,ro,x-gdu.hide
+LazyUnmount=yes
+
+[Install]
+WantedBy=multi-user.target

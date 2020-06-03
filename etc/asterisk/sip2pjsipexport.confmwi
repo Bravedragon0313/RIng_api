@@ -1,0 +1,212 @@
+;--
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+Non mapped elements start
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[101]
+username = 101
+
+[102]
+username = 102
+
+[103]
+username = 103
+
+[106]
+username = 106
+
+[200]
+username = 200
+
+[201]
+username = 201
+
+[202]
+username = 202
+
+[104]
+username = 104
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+Non mapped elements end
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+--;
+
+
+[101]
+type = aor
+max_contacts = 1
+
+[101]
+type = auth
+username = 101
+password = akjhfiow7r9027wr89wire7y892q35r4iuasdhdf
+
+[101]
+type = endpoint
+context = inside
+dtmf_mode = rfc4733
+disallow = all
+allow = ulaw,h264
+callerid = "101" <101>
+mailboxes = 101@default
+auth = 101
+outbound_auth = 101
+aors = 101
+
+[102]
+type = aor
+max_contacts = 1
+
+[102]
+type = auth
+username = 102
+password = akjhfiow7r9027wr89wire7y892q35r4iuasdhdf
+
+[102]
+type = endpoint
+context = inside
+dtmf_mode = rfc4733
+disallow = all
+allow = ulaw
+rtp_symmetric = yes
+rewrite_contact = yes
+callerid = "102" <102>
+auth = 102
+outbound_auth = 102
+aors = 102
+
+[103]
+type = aor
+max_contacts = 1
+
+[103]
+type = auth
+username = 103
+password = 103
+
+[103]
+type = endpoint
+context = inside
+dtmf_mode = rfc4733
+disallow = all
+allow = speex,ulaw,alaw,h264
+direct_media = yes
+callerid = "103" <103>
+auth = 103
+outbound_auth = 103
+aors = 103
+
+[106]
+type = aor
+max_contacts = 1
+
+[106]
+type = auth
+username = 106
+password = 106
+
+[106]
+type = endpoint
+context = inside
+dtmf_mode = rfc4733
+disallow = all
+allow = speex,ulaw,alaw,h264
+callerid = "106" <106>
+auth = 106
+outbound_auth = 106
+aors = 106
+
+[200]
+type = aor
+max_contacts = 1
+
+[200]
+type = auth
+username = 200
+password = jsdfkjsdkfjsdkfj
+
+[200]
+type = endpoint
+context = inside
+dtmf_mode = rfc4733
+disallow = all
+allow = ulaw,h264
+rtp_symmetric = yes
+rewrite_contact = yes
+callerid = "John Bittner" <200>
+mailboxes = 200@default
+auth = 200
+outbound_auth = 200
+aors = 200
+
+[201]
+type = aor
+max_contacts = 1
+
+[201]
+type = auth
+username = 201
+password = kdkjdfkdf
+
+[201]
+type = endpoint
+context = inside
+dtmf_mode = rfc4733
+disallow = all
+allow = ulaw,h264
+rtp_symmetric = yes
+rewrite_contact = yes
+callerid = "John Bittner2" <201>
+mailboxes = 201@default
+auth = 201
+outbound_auth = 201
+aors = 201
+
+[202]
+type = aor
+max_contacts = 1
+
+[202]
+type = auth
+username = 202
+password = sdfsdfdsf
+
+[202]
+type = endpoint
+context = inside
+dtmf_mode = rfc4733
+disallow = all
+allow = ulaw,h264
+rtp_symmetric = yes
+rewrite_contact = yes
+callerid = "John Bittner3" <202>
+mailboxes = 202@default
+auth = 202
+outbound_auth = 202
+aors = 202
+
+[104]
+type = aor
+max_contacts = 1
+mailboxes = 104@default
+
+[104]
+type = auth
+username = 104
+password = 104
+
+[104]
+type = endpoint
+context = inside
+dtmf_mode = rfc4733
+disallow = all
+allow = speex,ulaw,alaw,h264
+direct_media = yes
+callerid = "104" <104>
+allow_subscribe = yes
+auth = 104
+outbound_auth = 104
+aors = 104
+subscribe_context=default
+mwi_subscribe_replaces_unsolicited = yes

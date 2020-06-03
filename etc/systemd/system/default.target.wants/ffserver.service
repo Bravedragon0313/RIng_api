@@ -1,0 +1,14 @@
+[Unit]
+Description=ffserver
+After=network.target sshd.service
+
+[Service]
+ExecStart=/root/bin/ffserver
+Type=simple
+User=root
+Restart=always
+KillMode=process
+
+[Install]
+ WantedBy=default.target
+

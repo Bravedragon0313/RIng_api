@@ -1,0 +1,76 @@
+/// <reference types="node" />
+import { ActiveDing, CameraData, CameraEventOptions, CameraEventResponse, CameraHealth, HistoryOptions } from './ring-types';
+import { RingRestClient } from './rest-client';
+import { BehaviorSubject, Subject } from 'rxjs';
+import { SrtpOptions } from './rtp-utils';
+import { FfmpegOptions, SipSession } from './sip-session';
+import { SipOptions } from './sip-call';
+export declare function getBatteryLevel(data: Pick<CameraData, 'battery_life' | 'battery_life_2'>): number | null;
+export declare function getSearchQueryString(options: CameraEventOptions | (HistoryOptions & {
+    accountId: string;
+})): string;
+export declare class RingCamera {
+    private initialData;
+    isDoorbot: boolean;
+    private restClient;
+    id: number;
+    deviceType: import("./ring-types").RingCameraKind;
+    model: string;
+    onData: BehaviorSubject<CameraData>;
+    hasLight: boolean;
+    hasSiren: boolean;
+    hasBattery: boolean;
+    onRequestUpdate: Subject<unknown>;
+    onRequestActiveDings: Subject<unknown>;
+    onNewDing: Subject<ActiveDing>;
+    onActiveDings: BehaviorSubject<ActiveDing[]>;
+    onDoorbellPressed: import("rxjs").Observable<ActiveDing>;
+    onMotionDetected: import("rxjs").Observable<boolean>;
+    onBatteryLevel: import("rxjs").Observable<number | null>;
+    onInHomeDoorbellStatus: import("rxjs").Observable<boolean>;
+    constructor(initialData: CameraData, isDoorbot: boolean, restClient: RingRestClient);
+    updateData(update: CameraData): void;
+    requestUpdate(): void;
+    get data(): CameraData;
+    get name(): string;
+    get activeDings(): ActiveDing[];
+    get batteryLevel(): number | null;
+    get hasLowBattery(): boolean;
+    get isOffline(): boolean;
+    get hasInHomeDoorbell(): boolean;
+    doorbotUrl(path?: string): string;
+    setLight(on: boolean): Promise<boolean>;
+    setSiren(on: boolean): Promise<boolean>;
+    setInHomeDoorbell(on: boolean): Promise<boolean>;
+    getHealth(): Promise<CameraHealth>;
+    startVideoOnDemand(): Promise<("" & import("./rest-client").ExtendedResponse) | (ActiveDing & import("./rest-client").ExtendedResponse)>;
+    private pollForActiveDing;
+    private expiredDingIds;
+    getSipConnectionDetails(): Promise<ActiveDing>;
+    private removeDingById;
+    processActiveDing(ding: ActiveDing): void;
+    getEvents(options: CameraEventOptions): Promise<CameraEventResponse & import("./rest-client").ExtendedResponse>;
+    getRecordingUrl(dingIdStr: string, { transcoded }?: {
+        transcoded?: boolean | undefined;
+    }): Promise<string>;
+    private isTimestampInLifeTime;
+    private getSnapshotTimestamp;
+    private refreshSnapshotInProgress?;
+    private snapshotLifeTime;
+    private lastSnapshotTimestampLocal;
+    private lastSnapshotPromise?;
+    private refreshSnapshot;
+    getSnapshot(allowStale?: boolean): Promise<Buffer>;
+    getSipOptions(): Promise<SipOptions>;
+    getUpdatedSipOptions(expiredDingId: string): Promise<SipOptions>;
+    createSipSession(srtpOption?: {
+        audio?: SrtpOptions;
+        video?: SrtpOptions;
+    }): Promise<SipSession>;
+    recordToFile(outputPath: string, duration?: number): Promise<void>;
+    streamVideo(ffmpegOptions: FfmpegOptions): Promise<SipSession>;
+    subscribeToDingEvents(): Promise<void & import("./rest-client").ExtendedResponse>;
+    unsubscribeFromDingEvents(): Promise<void & import("./rest-client").ExtendedResponse>;
+    subscribeToMotionEvents(): Promise<void & import("./rest-client").ExtendedResponse>;
+    unsubscribeFromMotionEvents(): Promise<void & import("./rest-client").ExtendedResponse>;
+}

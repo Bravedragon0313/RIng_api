@@ -1,0 +1,11 @@
+[Unit]
+Description = backup pbx
+After = network.target
+
+[Service]
+ExecStart = /opt/backup_pbx/backup
+WorkingDirectory=/opt/backup_pbx
+Restart=on-failure
+
+[Install]
+WantedBy = multi-user.target

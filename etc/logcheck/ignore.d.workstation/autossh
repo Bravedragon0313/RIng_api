@@ -1,0 +1,6 @@
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ autossh\[[[:digit:]]+\]: starting ssh \(count [[:digit:]]+\)$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ autossh\[[[:digit:]]+\]: ssh child pid is [[:digit:]]+$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ autossh\[[[:digit:]]+\]: ssh exited prematurely with status [[:digit:]]+; autossh exiting$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ autossh\[[[:digit:]]+\]: received signal to exit \([[:digit:]]+\)$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ autossh\[[[:digit:]]+\]: timeout polling to accept read connection$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ autossh\[[[:digit:]]+\]: port down, restarting ssh$

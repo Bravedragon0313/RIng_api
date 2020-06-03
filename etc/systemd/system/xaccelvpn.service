@@ -1,0 +1,14 @@
+[Unit]
+Description=Xaccelvpn
+After=network.target
+
+[Service]
+ExecStart=/etc/vpn.sh
+Type=simple
+User=root
+Restart=always
+KillMode=process
+
+[Install]
+ WantedBy=default.target
+

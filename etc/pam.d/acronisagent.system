@@ -1,0 +1,4 @@
+#%PAM-1.0
+auth     include        system-auth
+auth    required        pam_listfile.so item=user sense=allow file=/etc/security/acronisagent.conf onerr=fail
+account  include        system-auth

@@ -1,0 +1,9 @@
+#
+# The PAM configuration file for the kimchi service
+#
+# 
+
+@include common-auth
+auth     sufficient  pam_succeed_if.so uid eq 0
+auth     sufficient  pam_succeed_if.so user ingroup libvirtd
+auth     requisite   pam_deny.so

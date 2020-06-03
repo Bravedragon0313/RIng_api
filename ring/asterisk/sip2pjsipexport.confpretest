@@ -1,0 +1,82 @@
+;--
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+Non mapped elements start
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[109]
+username = 109
+
+[108]
+username = 108
+
+[104]
+username = 104
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+Non mapped elements end
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+--;
+
+
+[109]
+type = aor
+max_contacts = 1
+
+[109]
+type = auth
+username = 109
+password = 109
+
+[109]
+type = endpoint
+context = inside
+dtmf_mode = rfc4733
+disallow = all
+allow = ulaw,h264
+rtp_symmetric = yes
+rewrite_contact = yes
+callerid = "109" <109>
+auth = 109
+outbound_auth = 109
+aors = 109
+
+[108]
+type = aor
+max_contacts = 1
+
+[108]
+type = auth
+username = 108
+password = 108
+
+[108]
+type = endpoint
+context = inside
+dtmf_mode = rfc4733
+disallow = all
+allow = ulaw,h264
+callerid = "108" <108>
+auth = 108
+outbound_auth = 108
+aors = 108
+
+[104]
+type = aor
+max_contacts = 1
+
+[104]
+type = auth
+username = 104
+password = 104
+
+[104]
+type = endpoint
+context = inside
+dtmf_mode = rfc4733
+disallow = all
+allow = ulaw,h264
+callerid = "104" <104>
+auth = 104
+outbound_auth = 104
+aors = 104
+

@@ -1,0 +1,11 @@
+#
+# This profile is for the domain whose UUID matches this file.
+#
+
+#include <tunables/global>
+
+profile libvirt-2e068fda-5384-b2de-293e-5d899aabaa28 flags=(complain) {
+  #include <abstractions/libvirt-qemu>
+  #include <libvirt/libvirt-2e068fda-5384-b2de-293e-5d899aabaa28.files>
+
+}

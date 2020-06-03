@@ -1,0 +1,18 @@
+[Unit]
+# Auto-generated, DO NOT EDIT
+Description=Service for snap application novnc.novncsvc
+Requires=snap-novnc-3.mount
+Wants=network.target
+After=snap-novnc-3.mount network.target
+X-Snappy=yes
+
+[Service]
+ExecStart=/usr/bin/snap run novnc.novncsvc
+SyslogIdentifier=novnc.novncsvc
+Restart=on-failure
+WorkingDirectory=/var/snap/novnc/3
+TimeoutStopSec=30
+Type=forking
+
+[Install]
+WantedBy=multi-user.target

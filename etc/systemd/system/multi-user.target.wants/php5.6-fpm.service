@@ -1,0 +1,13 @@
+[Unit]
+Description=The PHP 5.6 FastCGI Process Manager
+Documentation=man:php-fpm5.6(8)
+After=network.target
+
+[Service] 
+Type=notify
+PIDFile=/run/php/php5.6-fpm.pid
+ExecStart=/usr/sbin/php-fpm5.6 --nodaemonize --fpm-config /etc/php/5.6/fpm/php-fpm.conf
+ExecReload=/bin/kill -USR2 $MAINPID
+
+[Install]
+WantedBy=multi-user.target

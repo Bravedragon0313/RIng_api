@@ -1,0 +1,13 @@
+[connection]
+id=ethernet-p9p1
+uuid=5342e87c-47d5-493b-bf5e-97f1ab7ceef5
+type=ethernet
+interface-name=p9p1
+master=bridge0
+permissions=
+secondaries=
+slave-type=bridge
+timestamp=1567017473
+
+[ethernet]
+mac-address-blacklist=
